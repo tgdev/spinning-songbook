@@ -1,11 +1,14 @@
 {
-  "songs": [{
+  "data": [{
     "name": "Pump it up",
+    "type": "song",
     "tracks": [
       "pump"
-    ]
+    ],
+    "tags": []
   }, {
     "name": "I can sing a rainbow",
+    "type": "jackpot",
     "tracks": [
       "redshoes",
       "greenshirt"
