@@ -1,0 +1,14 @@
+{
+  "songs": [{
+    "name": "Pump it up",
+    "tracks": [
+      "pump"
+    ]
+  }, {
+    "name": "I can sing a rainbow",
+    "tracks": [
+      "redshoes",
+      "greenshirt"
+    ]
+  }]
+}
