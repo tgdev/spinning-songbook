@@ -1,0 +1,23 @@
+## References
+
+### The Canvas wheel...
+https://codepen.io/zadvorsky/pen/xzhBw
+http://jsfiddle.net/m1erickson/pL5jP/
+
+http://wheelnavjs.softwaretailoring.net/documentation.html
+
+### CSS wheel
+https://codepen.io/pixelass/pen/gEDbG
+https://tympanus.net/codrops/2013/08/09/building-a-circular-navigation-with-css-transforms/
+
+### CSS LED Blubs
+https://codepen.io/fskirschbaum/pen/MYJNaj
+
+### Some CSS animation goodness
+https://martinwolf.org/blog/2015/01/pure-css-savingloading-dots-animation
+https://css-tricks.com/restart-css-animation/
+
+### Fonts
+Heading - https://www.whatfontis.com/Round-Rock-NF-nicksfonts.font?text=ELVISC
+
+Wheel text -

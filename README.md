@@ -2,6 +2,8 @@
 
 A fun, custom audio player based on Elvis Costello's "Spectacular spinning songbook" tour.
 
+![alt text](http://www.elviscostello.info/wiki/images/4/40/The_Return_Of_The_Spectacular_Spinning_Songbook_album_cover.jpg, "Spinning songbook album cover")
+
 ## Dependencies
 
 - Node >= v6.3.1

@@ -16,31 +16,208 @@
       --purple: #781e76;
       --red: #e01b35;
       --yellow: #fcd356;
+
+      --container: 640px;
+      --base-spacing: 30px;
+      --half-spacing: 15px;
     }
+
+    /* Globals */
+
+    body {
+      margin: 0;
+      font: 16px/24px Arial, sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+      background-color: var(--darkBlue);
+      color: white;
+    }
+
+    h1, h2, h3, h4 {
+      margin: 0;
+    }
+
+    h1 {
+      margin-bottom: 1.4rem;
+      font-size: 4rem;
+      line-height: 1.2;
+      color: var(--lime);
+    }
+
+    h1 small {
+      display: block;
+      font-size: 2.5rem;
+      color: var(--pink);
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      border-bottom: 2px solid var(--yellow);
+    }
+
+    a:hover,
+    a:focus {
+      border-bottom: none;
+    }
+
+    /* Header */
+    .header {
+      margin-bottom: var(--base-spacing);
+    }
+
+    /* Footer */
+    .footer {
+      padding: var(--half-spacing) 0;
+    }
+
+    .footer a {
+      margin: 0 5px;
+    }
+
+    /* Main */
+    .main {
+      position: relative;
+      max-width: var(--container);
+      min-height: 300px;
+      margin: 0 auto;
+      margin-bottom: var(--base-spacing);
+    }
+
+    /* Player */
+    .player-wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: calc(var(--container) / 2);
+      padding: 10px;
+      margin: 0 auto;
+      overflow: hidden;
+      background-color: rgba(0,0,0, 0.2);
+    }
+
+    .player__heading {
+      flex: 0 0 auto;
+      margin-right: 10px;
+    }
+
+    .player__content {
+      flex: 1 0 auto;
+    }
+
+    .track-wrapper {
+      display: block;
+      overflow: hidden;
+    }
+
+    .track {
+      display: inline-block;
+      width: 100%;
+      transform: translate3d(100%, 0, 0);
+      animation: infinite linear 5s ticker;
+    }
+
+    .track.inactive {
+      opacity: 0.5;
+    }
+
+    @-webkit-keyframes ticker {
+      100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+      }
+    }
+
+    @keyframes ticker {
+      100% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+      }
+    }
+
+    /* Wheel */
+    .wheel {
+      overflow: hidden;
+      /*border-radius: 50%;*/
+
+    }
+
+    .wheel__wedge {
+      padding: 0 10px;
+      font-size: 0.8rem;
+      text-align: right;
+      transition: all .07s ease;
+    }
+
+    .wheel__wedge:nth-child(odd) {
+      background-color: var(--yellow);
+      color: var(--red);
+    }
+
+    .wheel__wedge:nth-child(even) {
+      background-color: var(--red);
+      color: var(--yellow);
+    }
+
+    .wheel__wedge--active {
+      /*box-shadow: 0 0 1rem white;*/
+      border: 4px solid white;
+    }
+
+    /* Arrow button */
+    .arrow-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--brown);
+      color: var(--red);
+    }
+
+    /*.arrow-button img {
+      width: 100%;
+      height: 100%;
+    }*/
+
   </style>
 </head>
 <body>
-  <div class="container">
-    <header class="header">
-      <h1></h1>
-      <div class="player">
 
-      </div>
-    </header>
+  <header class="header">
+    <h1>Elvis Costello's <small>Spinning songbook Radio</small></h1>
 
-    <div class="spinning-wheel">
-      <div class="wedge">
-
+    <div class="player-wrapper">
+      <div class="player__heading">Now Playing:</div>
+      <div class="player__content">
+        <span class="track-wrapper">
+          <span class="track inactive">Spin that wheel!</span>
+        </span>
       </div>
-      <div class="arrow-button">
-        <img src="/assets/imgs/arrow.svg" alt="" />
-      </div>
+      <audio src="" class="player"></audio>
     </div>
 
-    <footer class="footer">
-      <p>&copy; 2017 | <a href="https://github.com/tgdev/spinning-songbook/" target="_blank">View on github</a> | <a href="http://www.elviscostello.info/wiki/index.php/The_Return_Of_The_Spectacular_Spinning_Songbook" target="_blank">What is the Spinning Songbook?</a></p>
-    </footer>
-  </div>
+  </header>
+
+  <main class="main">
+    <div class="outter-wheel"></div>
+    <div class="spinning-wheel wheel">
+      <div class="wheel__wedge" data-track="">Alison</div>
+      <div class="wheel__wedge" data-track="">Watching the detectives</div>
+      <div class="wheel__wedge wheel__wedge--active" data-track="">Living in paradise</div>
+      <div class="wheel__wedge" data-track="">Oliver's army</div>
+      <div class="wheel__wedge" data-track="">Pump it up in 6/8</div>
+    </div>
+    <div class="arrow-button">
+      <img src="/assets/imgs/arrow.svg" alt="" />
+    </div>
+  </main>
+
+  <footer class="footer">
+    <small>&copy; 2017 <a href="http://www.tomgillard.com">Tom Gillard</a> | <a href="https://github.com/tgdev/spinning-songbook/" target="_blank">View on github</a> | <a href="http://www.elviscostello.info/wiki/index.php/The_Return_Of_The_Spectacular_Spinning_Songbook" target="_blank">What is this?</a></small>
+  </footer>
+
   <script>
 
   </script>
